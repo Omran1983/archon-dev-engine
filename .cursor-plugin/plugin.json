@@ -1,0 +1,23 @@
+{
+    "name": "archon-dev-engine",
+    "version": "0.1.0",
+    "description": "AI-native engineering discipline for fast-moving teams. Enforces async-first architecture, deterministic structured outputs, and production-grade system design.",
+    "author": {
+        "name": "A-ONE GLOBAL RESOURCING LTD"
+    },
+    "homepage": "https://archon-engine.dev",
+    "repository": "https://github.com/archon-labs/archon-dev-engine",
+    "license": "MIT",
+    "keywords": [
+        "ai",
+        "engineering",
+        "architecture",
+        "async",
+        "structured-output",
+        "discipline",
+        "backend"
+    ],
+    "rules": "rules/",
+    "agents": "agents/",
+    "skills": "skills/"
+}

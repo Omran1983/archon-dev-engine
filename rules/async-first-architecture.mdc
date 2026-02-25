@@ -1,0 +1,20 @@
+---
+description: Enforce deterministic, modular, and production-grade AI system design.
+alwaysApply: true
+---
+
+# ARCHON Async-First Architecture
+
+All AI-native systems must adhere to high-performance architecture standards:
+
+1. **Async-First Execution**: 
+   - Never block the critical request path.
+   - Use background tasks or message queues (BullMQ, Celery) for AI inference and high-latency I/O.
+2. **Deterministic Response Logic**:
+   - Every AI response must be traceable.
+   - Use versioned prompt templates to ensure consistent behavior across deployments.
+3. **Structured Boundaries**:
+   - Strictly separate Reasoning layers (Agents) from Execution layers (Tools).
+   - Fail instantly if required environment variables or configuration keys are missing.
+4. **Observable State**:
+   - Log all external system calls with input/state snapshots for debugging.

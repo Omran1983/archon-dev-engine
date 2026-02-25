@@ -1,0 +1,18 @@
+---
+description: Enforce structured JSON schemas for all AI-native system interactions.
+alwaysApply: true
+---
+
+# ARCHON Structured Discipline
+
+To ensure system reliability and reliable scaling:
+
+1. **Schema-First Design**:
+   - All AI outputs must follow a strictly defined JSON schema.
+   - Strip all conversational "fluff" from system-to-system messages.
+2. **Typed Communication**:
+   - Use explicit Enums for all system status and action types.
+   - Provide machine-readable error codes for every failure mode.
+3. **Boundary Validation**:
+   - Validate all AI outputs at the system boundary (e.g., Pydantic or Zod).
+   - Reject any malformed responses immediately with a structured error log.
