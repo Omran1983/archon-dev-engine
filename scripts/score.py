@@ -53,15 +53,21 @@ def run_scorer():
         return
 
     print("--- ARCHON Architecture Score ---")
-    files = [f for f in os.listdir('.') if f.endswith('.py') or f.endswith('.ts') or f.endswith('.js')]
+    source_files = []
+    for root, dirs, files in os.walk('.'):
+        # Skip hidden directories like .git, .cursor, etc.
+        dirs[:] = [d for d in dirs if not d.startswith('.')]
+        for f in files:
+            if f.endswith(('.py', '.ts', '.js')):
+                source_files.append(os.path.join(root, f))
     
-    if not files:
+    if not source_files:
         print("No source files found to score.")
         return
 
     total_stats = {"async": [], "structured": [], "config": []}
     
-    for f in files:
+    for f in source_files:
         res = score_file(f)
         if res:
             for k in total_stats:
