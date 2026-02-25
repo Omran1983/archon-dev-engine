@@ -19,10 +19,11 @@ def install_guard():
     shutil.copy2(guard_script_src, guard_script_dest)
     print(f"[OK] ARCHON Guard logic copied to {guard_script_dest}")
 
-    # Create pre-commit hook
+    # Create pre-commit hook (use forward slashes for path compatibility in sh)
+    guard_script_unix = guard_script_dest.replace('\\', '/')
     with open(pre_commit_path, 'w') as f:
         f.write("#!/bin/sh\n")
-        f.write(f"python3 {guard_script_dest} $(git diff --cached --name-only --diff-filter=ACM)\n")
+        f.write(f"python3 \"{guard_script_unix}\" $(git diff --cached --name-only --diff-filter=ACM)\n")
     
     # Make executable
     if os.name != 'nt':
