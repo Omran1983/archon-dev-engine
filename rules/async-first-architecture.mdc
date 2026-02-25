@@ -7,6 +7,9 @@ alwaysApply: true
 
 All AI-native systems must adhere to high-performance architecture standards:
 
+> [!TIP]
+> **Mode Support**: Set `"archonMode": "strict"` in your project config to enforce vetos, or `"advisory"` for warnings only.
+
 1. **Async-First Execution**: 
    - Never block the critical request path.
    - Use background tasks or message queues (BullMQ, Celery) for AI inference and high-latency I/O.

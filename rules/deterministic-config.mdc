@@ -1,0 +1,20 @@
+---
+description: Enforce environment-based configuration and block hardcoded secrets.
+alwaysApply: true
+---
+
+# ARCHON Deterministic Config
+
+To build production-grade, portable systems, all configuration must be externalized:
+
+1. **Zero Hardcoded Secrets**:
+   - Never commit API keys, passwords, or tokens directly.
+   - Any string matching common secret patterns (e.g., `sk-`, `ghp_`, `AIza`) must be moved to environment variables.
+2. **Standardized .env Pattern**:
+   - Use `dotenv` or equivalent for local development.
+   - Always provide a `.env.example` file that defines required keys without values.
+3. **Fail-Fast Initialization**:
+   - Systems must validate all required environment variables at startup. 
+   - Raise a clear exception and terminate if a mandatory config key is missing.
+4. **No Silent Defaults**:
+   - Avoid using silent fallback values for critical configuration (e.g., DB URLs). Force explicit configuration.

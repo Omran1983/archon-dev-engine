@@ -1,44 +1,35 @@
 # ARCHON Dev Engine
 
-> ARCHON Dev Engine enforces engineering discipline in AI-native systems — before production breaks it.
+> Stop AI from writing fragile backend systems.
 
-**ARCHON Dev Engine** is a Cursor Plugin that enforces high-performance engineering standards. Designed for AI-first startups, it ensures your agents build systems that are async-first, deterministic, and production-ready.
+**ARCHON Dev Engine** is a Cursor Plugin that enforces production-grade engineering discipline. It ensures your AI agents build systems that are async-first, deterministic, and production-ready.
 
-## The A.R.C.H.O.N. Doctrine
+## The Core Discipline
+- **Async-First**: Blocks blocking I/O (requests, types) in critical paths.
+- **Structured Output**: Mandates JSON schemas for AI responses.
+- **Deterministic Config**: Prevents hardcoded secrets and silent defaults.
+- **Architecture Scoring**: Gamifies engineering quality with your own "ARCHON Score".
 
-- **A**sync Sovereignty: Resilient, non-blocking architecture.
-- **R**eproducible Intelligence: Structured, versioned AI outputs.
-- **C**ompliance Embedded: Risk-aware systems by design.
-- **H**ardened Execution: Observable, failure-transparent workflows.
-- **O**perational Discipline: Deterministic structure and config layering.
-- **N**ative Enforcement: Strict rule-based adherence.
+## Quick Start (72 Seconds)
 
-## Features
+1. **Install Plugin**: 
+   - Open Cursor Settings -> Plugins -> Development. 
+   - Load this folder.
+2. **Set the Doctrine**:
+   - Cursor's AI will now automatically follow the `.mdc` rules in this repo.
+3. **Enable the Guard**:
+   - Run `python scripts/install-guard.py` to enable the git pre-commit veto.
+4. **Get Your Score**:
+   - Run `python scripts/score.py` to check your project's compliance.
 
-- **Portability**: v0.1.0 is dependency-free and works across any local environment.
-- **Sovereign Rules**: Persistent guidance for async-first and structured system design.
+## The ARCHON Doctrine
+ARCHON is built for AI-first teams who need to move fast without the stability of their backend collapsing. It doesn't just suggest—it enforces.
+
+## Features v0.1.0
 - **ARCHON Architect**: A specialized system designer agent.
-- **Structured Output Skill**: Enforces machine-readable system communication.
+- **Async Veto**: Immediate rejection of toy patterns.
+- **Fail-Closed Security**: Git-level doctrine enforcement.
 
-## ARCHON Guard (Fail-Closed Enforcement)
-
-To enforce the doctrine at the commit level, install the ARCHON Guard:
-
-```bash
-python scripts/install-guard.py
-```
-
-This installs a git `pre-commit` hook that vetoes any code violating the Async-First doctrine.
-
-## Installation
-
-1. Open Cursor Settings.
-2. Navigate to **Plugins** -> **Development**.
-3. Select **Load Plugin from Folder**.
-4. Choose the `archon-dev-engine` directory.
-
-## About
-Built by **A-ONE GLOBAL RESOURCING LTD** to standardize the future of AI-native engineering.
-
-## License
-MIT
+---
+Built by **A-ONE GLOBAL RESOURCING LTD**. 
+[MIT License](LICENSE)
