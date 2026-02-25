@@ -20,6 +20,16 @@
 - **ARCHON Architect**: A specialized system designer agent.
 - **Structured Output Skill**: Enforces machine-readable system communication.
 
+## ARCHON Guard (Fail-Closed Enforcement)
+
+To enforce the doctrine at the commit level, install the ARCHON Guard:
+
+```bash
+python scripts/install-guard.py
+```
+
+This installs a git `pre-commit` hook that vetoes any code violating the Async-First doctrine.
+
 ## Installation
 
 1. Open Cursor Settings.
