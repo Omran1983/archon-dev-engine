@@ -1,0 +1,45 @@
+name: "🔍 Bug Report/False Positive"
+description: Report an issue with ARCHON enforcement logic.
+labels: ["v0.1-feedback", "bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping harden the ARCHON doctrine.
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: "e.g., Cursor v0.42, Python 3.11, FastAPI"
+    validations:
+      required: true
+  - type: dropdown
+    id: violation_type
+    attributes:
+      label: Violation Type
+      options:
+        - Async-First (Blocking I/O)
+        - Structured Output
+        - Deterministic Config
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What should ARCHON have done?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What happened instead? (Include logs if possible)
+    validations:
+      required: true
+  - type: textarea
+    id: fix
+    attributes:
+      label: Suggested Fix
+      description: How would you improve this rule?

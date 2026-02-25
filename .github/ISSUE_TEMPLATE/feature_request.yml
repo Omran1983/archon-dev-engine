@@ -1,0 +1,18 @@
+name: "🚀 Feature Request"
+description: Suggest an enhancement for ARCHON.
+labels: ["feature-request"]
+body:
+  - type: textarea
+    id: feature
+    attributes:
+      label: Feature Description
+      description: What discipline rule or tool are you looking for?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why is this needed?
+      description: Describe the pain point this feature solves for AI-native teams.
+    validations:
+      required: true

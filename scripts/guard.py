@@ -40,7 +40,9 @@ def main():
             vetoes += 1
 
     if vetoes > 0:
-        print(f"\n[ARCHON GUARD] Commit aborted. {vetoes} architecture violations found.")
+        print(f"\n❌ [ARCHON VETO] ARCHON prevented {vetoes} high-risk backend patterns.")
+        print("Recommend refactoring to Async-First architecture before proceeding.")
+        print("[ARCHON GUARD] Commit aborted for system integrity.")
         return 1
     
     return 0

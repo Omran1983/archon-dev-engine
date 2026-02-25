@@ -46,6 +46,12 @@ def score_file(filepath):
     return scores
 
 def run_scorer():
+    if len(sys.argv) > 1 and sys.argv[1] == "feedback":
+        print("--- ARCHON Feedback Loop ---")
+        print("Submit feedback, bug reports, or false-positives at:")
+        print("https://github.com/Omran1983/archon-dev-engine/issues/new")
+        return
+
     print("--- ARCHON Architecture Score ---")
     files = [f for f in os.listdir('.') if f.endswith('.py') or f.endswith('.ts') or f.endswith('.js')]
     
