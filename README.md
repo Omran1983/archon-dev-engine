@@ -12,8 +12,8 @@
 
 ## Quick Start (72 Seconds)
 
-1. **Install Plugin**: 
-   - Open Cursor Settings -> Plugins -> Development. 
+1. **Install Plugin**:
+   - Open Cursor Settings -> Plugins -> Development.
    - Load this folder.
 2. **Set the Doctrine**:
    - Cursor's AI will now automatically follow the `.mdc` rules in this repo.
@@ -26,10 +26,10 @@
 ARCHON is built for AI-first teams who need to move fast without the stability of their backend collapsing. It doesn't just suggest—it enforces.
 
 ## Features v0.1.0
-- **ARCHON Architect**: A specialized system designer agent.
-- **Async Veto**: Immediate rejection of toy patterns.
-- **Fail-Closed Security**: Git-level doctrine enforcement.
+- **ARCHON Architect**: Specialized system designer agent for production-grade backends.
+- **Async Veto**: Real-time rejection of fragile code patterns.
+- **Fail-Closed Security**: Git-level doctrine enforcement that stops bad code at the commit.
 
 ---
-Built by **A-ONE GLOBAL RESOURCING LTD**. 
+Built by **A-ONE GLOBAL RESOURCING LTD**.
 [MIT License](LICENSE)
