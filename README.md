@@ -2,6 +2,8 @@
 
 > Stop AI from writing fragile backend systems.
 
+![ARCHON Demo – Real Veto in Action](demo.gif)
+
 **ARCHON Dev Engine** is a Cursor Plugin that enforces production-grade engineering discipline. It ensures your AI agents build systems that are async-first, deterministic, and production-ready.
 
 ## The Core Discipline
